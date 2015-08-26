@@ -1,13 +1,11 @@
----
-tags: oo, assessment
-language: ruby
----
+# Object Orientation Assessment
 
-# Basic Object Orientation and Ruby Assessment
+## Objectives
+
+1. Code a series of classes and methods that will help you to review the concepts covered in this unit. 
 
 
 ## Instructions
 
-Get all the tests passing. Start by running `rspec spec/000_dogs_spec.rb` and follow the instructions. 
+This is a purely test-driven lab. Run the test suite using `rspec --fail-fast` or `learn --fail-fast` and use the test output to get all the tests passing. 
 
-Once you're done with `000_dogs_spec.rb`, continue with the other tests (`001_count_sentences_spec.rb`, `002_dice_spec.rb`, etc.)
