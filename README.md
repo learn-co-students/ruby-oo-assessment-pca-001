@@ -9,3 +9,5 @@
 
 This is a purely test-driven lab. Run the test suite using `rspec --fail-fast` or `learn --fail-fast` and use the test output to get all the tests passing. 
 
+
+<a href='https://learn.co/lessons/ruby-oo-assessment' data-visibility='hidden'>View this lesson on Learn.co</a>
