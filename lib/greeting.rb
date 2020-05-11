@@ -11,3 +11,33 @@
 # afternoon: 12 - 19: Good Afternoon!
 # night: 20 - 05: Good night
 
+class Greeting
+  def initialize(hour)
+    @hour = hour
+  end
+
+  def say
+    case @hour
+    when (6..11)
+      "Good Morning!"
+    when (12..19)
+      "Good Afternoon!"
+    when (20..24)
+      "Good Night!"
+    when (1..5)
+      "Good Night!"
+    end
+  end
+
+  def morning?
+    (6..11).cover? @hour
+  end
+
+  def afternoon?
+    (12..19).cover? @hour
+  end
+
+  def night?
+    !morning? && !afternoon?
+  end
+end
