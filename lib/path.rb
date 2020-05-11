@@ -6,7 +6,7 @@ class Path
                       # the path variable, we no longer need to
                       # pass it around to all the other methods
                       # that rely on it.
-  end                 
+  end
 
   def normalize_path
     "#{"#{Dir.pwd}/" if relative_path?}#{path}"
