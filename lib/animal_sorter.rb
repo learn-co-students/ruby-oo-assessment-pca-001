@@ -1,9 +1,20 @@
-# Build a class AnimalSorter that accepts a list of animals on 
-# initialization.
+class AnimalSorter
+  def initialize(animals)
+    @animals = animals
+    @land_animals = ["aardvark", "cat", "elephant"]
+  end
 
-# Define a to_a method to account for the species in the test suite.
-
-# Return an array that contains two arrays, the first one
-# should include the sea creatures, the second, land animals.
-
-# Read the test suite for an example of a nested array.
+  def to_a
+    sea_creatures = []
+    land_animals = []
+    @animals.each do |animal|
+      if @land_animals.include?(animal)
+        land_animals << animal
+      else
+        sea_creatures << animal
+      end
+    end
+    @animals.clear << sea_creatures
+    @animals << land_animals
+  end
+end
