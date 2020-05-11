@@ -1,13 +1,23 @@
-# Define a class Greeting with 4 methods
-# say, morning?, afternoon?, night?
+class Greeting
+  def initialize(hour)
+    @hour = hour
+  end
 
-# When creating a Greeting, it should accept an argument of the hour
-# of the day (in military time).
+  def say
+    return "Good Morning!" if morning?
+    return "Good Afternoon!" if afternoon?
+    return "Good Night!" if night?
+  end
 
-# The say method should give the appropriate greeting for the time
-# of day using the morning?, afternoon?, night? methods.
+  def morning?
+    @hour.between?(6, 11)
+  end
 
-# morning: 06 - 11: Good Morning!
-# afternoon: 12 - 19: Good Afternoon!
-# night: 20 - 05: Good night
+  def afternoon?
+    @hour.between?(12, 19)
+  end
 
+  def night?
+    @hour.between?(20, 23) || @hour.between?(0, 5)
+  end
+end
